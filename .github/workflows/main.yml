@@ -2,6 +2,7 @@ on:
   push:
     branches:
     - produstions
+    - staging
   workflow_dispatch:
 jobs:
   deploy:
