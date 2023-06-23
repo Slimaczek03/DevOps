@@ -1,17 +1,17 @@
 on:
   push:
     branches:
-    - produstions
+    - production
   workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
     - name: krok 1
-     uses: actions/checkout@v1
+    uses: actions/checkout@v1
     - name: wdrożenie aplikacji do ftp
-     uses: SamKirkland/FTP-Deploy-Action@v4.3.3
-      with: 
+    uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+    with: 
         server: "slimak.ct8.pl"
         server-dir: "./public_html/github.ct8.pl/"
         username: ${{secrets.FTP_USERNAME}}
