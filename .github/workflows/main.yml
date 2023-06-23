@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: krok 1
-    uses: actions/checkout@v1
+      uses: actions/checkout@v1
     - name: wdrożenie aplikacji do ftp
-    uses: SamKirkland/FTP-Deploy-Action@v4.3.3
-    with: 
-        server: "slimak.ct8.pl"
-        server-dir: "./public_html/github.ct8.pl/"
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+      with: 
+        server: "s1.ct8.pl"
+        server-dir: "./public_html/slimak.ct8.pl/"
         username: ${{secrets.FTP_USERNAME}}
         password: ${{secrets.FTP_PASSWORD}}
